@@ -1,11 +1,10 @@
 <%- include ("./templates/_header") %>
 
-
 <main role="main" class="container">
     <div class="row">
       <div class="col-md-8 blog-main">
-        
-        <form action="/edit/<%= post._id  %> " method="POST">
+
+        <form action="/edit/<%= post._id %> " method="post">
           <div class="form-group">
             <input type="text" class="form-control" name="title" placeholder="Title" value="<%= post.title %>">
           </div>
@@ -16,11 +15,10 @@
             <textarea class="form-control" name="post_data" cols="100" rows="10"
               placeholder="Add a Description"><%= post.post_data %></textarea>
           </div>
-          <button type="submit" class="btn btn-primary">Edit Post</button>
+          <button type="submit" class="btn btn-primary">Edit post</button>
         </form>
       </div>
     </div>
   </main>
 
-
-<%- include ("./templates/_footer") %>
+  <%- include ("./templates/_footer") %>
